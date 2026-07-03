@@ -1,38 +1,48 @@
-// =======================================
+// ======================================
 // Saidul Gaming Vai Live Score Studio
-// config.js
-// =======================================
+// Version 3.0
+// ======================================
 
 const CONFIG = {
-  appName: "Saidul Gaming Vai",
-  version: "3.0.0",
 
-  tournament: "FIFA World Cup 2026",
+    appName: "Saidul Gaming Vai",
 
-  theme: "dark",
+    tournament: "FIFA World Cup 2026",
 
-  timer: {
-    minute: 0,
-    second: 0,
-    running: false
-  },
+    homeTeam: {
+        name: "Argentina",
+        logo: "assets/teams/argentina.png",
+        score: 0
+    },
 
-  home: {
-    name: "Argentina",
-    logo: "assets/teams/argentina.png",
-    score: 0
-  },
+    awayTeam: {
+        name: "Brazil",
+        logo: "assets/teams/brazil.png",
+        score: 0
+    },
 
-  away: {
-    name: "Brazil",
-    logo: "assets/teams/brazil.png",
-    score: 0
-  },
+    timer: {
+        minute: 0,
+        second: 0,
+        running: false
+    },
 
-  background: "assets/video/bg.mp4",
+    commentary: "Welcome to Saidul Gaming Vai Live Score.",
 
-  sounds: {
-    goal: "assets/audio/goal.mp3",
-    whistle: "assets/audio/whistle.mp3"
-  }
+    goalScorers: [],
+
+    stats: {
+        possession: "50% - 50%",
+        shots: "0 - 0",
+        corners: "0 - 0",
+        fouls: "0 - 0"
+    },
+
+    background: "assets/video/bg.mp4",
+
+    sounds: {
+        goal: "assets/audio/goal.mp3",
+        whistle: "assets/audio/whistle.mp3"
+    }
+
 };
