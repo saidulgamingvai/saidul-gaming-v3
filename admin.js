@@ -63,3 +63,28 @@ function saveChanges() {
 
     alert("✅ Changes Saved Successfully");
 }
+function yellowCard(){
+
+    match.event={
+        text:"🟨 Yellow Card",
+        type:"yellow"
+    };
+
+    saveMatch();
+
+    alert("Yellow Card Sent");
+
+}
+
+function redCard(){
+
+    match.event={
+        text:"🟥 Red Card",
+        type:"red"
+    };
+
+    saveMatch();
+
+    alert("Red Card Sent");
+
+}
