@@ -116,3 +116,14 @@ function addGoalScorer(){
     alert("Goal Scorer Added");
 
 }
+match.timeline.push({
+
+minute:match.timer.minute,
+
+event:"⚽ Goal",
+
+text:player
+
+});
+
+saveMatch();
