@@ -149,3 +149,31 @@ header{
 #goalPopup.show{
     top:25px;
 }
+/* Match Event Popup */
+
+#eventPopup{
+    position:fixed;
+    top:90px;
+    left:50%;
+    transform:translateX(-50%);
+    padding:15px 30px;
+    border-radius:12px;
+    font-size:28px;
+    font-weight:bold;
+    color:#fff;
+    display:none;
+    z-index:9999;
+}
+
+.yellow{
+    background:#FFC107;
+    color:#000;
+}
+
+.red{
+    background:#E53935;
+}
+
+.green{
+    background:#00C853;
+}
