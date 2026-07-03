@@ -129,3 +129,23 @@ header{
 }
 
 }
+/* Goal Popup */
+
+#goalPopup{
+    position:fixed;
+    top:-120px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#00c853;
+    color:#fff;
+    font-size:34px;
+    font-weight:bold;
+    padding:15px 40px;
+    border-radius:15px;
+    transition:.5s;
+    z-index:9999;
+}
+
+#goalPopup.show{
+    top:25px;
+}
