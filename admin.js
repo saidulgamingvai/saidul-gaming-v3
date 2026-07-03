@@ -59,7 +59,20 @@ function saveChanges() {
     match.commentary =
         document.getElementById("commentary").value;
 
-    saveMatch();
+    saveMatch(match.stats.possession =
+document.getElementById("possession").value;
+
+match.stats.shots =
+document.getElementById("shots").value;
+
+match.stats.shotsTarget =
+document.getElementById("shotsTarget").value;
+
+match.stats.corners =
+document.getElementById("corners").value;
+
+match.stats.fouls =
+document.getElementById("fouls").value;);
 
     alert("✅ Changes Saved Successfully");
 }
