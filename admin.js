@@ -162,3 +162,21 @@ function addRedCard(){
     alert("Red Card Added");
 
 }
+function addSubstitution(){
+
+    const outPlayer = document.getElementById("playerOut").value;
+    const inPlayer = document.getElementById("playerIn").value;
+
+    if(outPlayer==="" || inPlayer==="") return;
+
+    match.timeline.push({
+        minute: match.timer.minute,
+        event: "🔄 Substitution",
+        text: `${outPlayer} ⟶ ${inPlayer}`
+    });
+
+    saveMatch();
+
+    alert("Substitution Added");
+
+}
