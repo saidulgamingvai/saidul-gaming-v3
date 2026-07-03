@@ -2,10 +2,10 @@
 // Saidul Gaming Vai Admin Panel
 // ==============================
 
-let match = JSON.parse(localStorage.getItem("match")) || CONFIG;
+let match = loadMatch();
 
 // Save
-function saveMatch() {
+function saveMatch(match); {
     localStorage.setItem("match", JSON.stringify(match));
 }
 
@@ -13,7 +13,7 @@ function saveMatch() {
 function homePlus() 
 celebrateGoal();
 match.goalEvent = true;
-saveMatch();{
+saveMatch(match);{
     match.homeTeam.score++;
     saveMatch();
 }
@@ -22,7 +22,7 @@ saveMatch();{
 function homeMinus() {
     if (match.homeTeam.score > 0) {
         match.homeTeam.score--;
-        saveMatch();
+        saveMatch(match);
     }
 }
 
@@ -30,23 +30,23 @@ function homeMinus() {
 function awayPlus() 
 celebrateGoal();
 match.goalEvent = true;
-saveMatch();{
+saveMatch(match);{
     match.awayTeam.score++;
-    saveMatch();
+    saveMatch(match);
 }
 
 // Away Goal -
 function awayMinus() {
     if (match.awayTeam.score > 0) {
         match.awayTeam.score--;
-        saveMatch();
+        saveMatch(match);
     }
 }
 
 // Start / Pause Timer
 function toggleTimer() {
     match.timer.running = !match.timer.running;
-    saveMatch();
+    saveMatch(match);
 
     alert(match.timer.running ? "▶️ Timer Started" : "⏸️ Timer Paused");
 }
@@ -87,7 +87,7 @@ function yellowCard(){
         type:"yellow"
     };
 
-    saveMatch();
+    saveMatch(match);
 
     alert("Yellow Card Sent");
 
@@ -100,7 +100,7 @@ function redCard(){
         type:"red"
     };
 
-    saveMatch();
+    saveMatch(match);
 
     alert("Red Card Sent");
 
@@ -115,7 +115,7 @@ function addGoalScorer(){
 
     match.goalScorers.push(`${minute}' ⚽ ${player}`);
 
-    saveMatch();
+    saveMatch(match);
 
     alert("Goal Scorer Added");
 
@@ -130,7 +130,7 @@ text:player
 
 });
 
-saveMatch();
+saveMatch(match);
 function addYellowCard(){
 
     const player = document.getElementById("yellowPlayer").value;
@@ -143,7 +143,7 @@ function addYellowCard(){
         text:player
     });
 
-    saveMatch();
+    saveMatch(match);
 
     alert("Yellow Card Added");
 
@@ -161,7 +161,7 @@ function addRedCard(){
         text:player
     });
 
-    saveMatch();
+    saveMatch(match);
 
     alert("Red Card Added");
 
@@ -179,7 +179,7 @@ function addSubstitution(){
         text: `${outPlayer} ⟶ ${inPlayer}`
     });
 
-    saveMatch();
+    saveMatch(match);
 
     alert("Substitution Added");
 
@@ -196,7 +196,7 @@ function halfTime(){
 
     match.timer.running = false;
 
-    saveMatch();
+    saveMatch(match);
 
     alert("Half Time");
 }
@@ -213,7 +213,7 @@ function fullTime(){
 
     match.timer.running = false;
 
-    saveMatch();
+    saveMatch(match);
 
     alert("Full Time");
 }
