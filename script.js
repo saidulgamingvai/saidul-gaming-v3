@@ -60,6 +60,11 @@ setInterval(() => {
 
 // First Load
 updateScreen();
+const ticker = document.getElementById("tickerText");
+
+if (ticker) {
+    ticker.innerText = match.commentary;
+}
 function showGoalPopup(player="GOAL!"){
 
     const popup=document.getElementById("goalPopup");
