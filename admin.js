@@ -127,3 +127,38 @@ text:player
 });
 
 saveMatch();
+function addYellowCard(){
+
+    const player = document.getElementById("yellowPlayer").value;
+
+    if(player==="") return;
+
+    match.timeline.push({
+        minute:match.timer.minute,
+        event:"🟨 Yellow Card",
+        text:player
+    });
+
+    saveMatch();
+
+    alert("Yellow Card Added");
+
+}
+
+function addRedCard(){
+
+    const player = document.getElementById("redPlayer").value;
+
+    if(player==="") return;
+
+    match.timeline.push({
+        minute:match.timer.minute,
+        event:"🟥 Red Card",
+        text:player
+    });
+
+    saveMatch();
+
+    alert("Red Card Added");
+
+}
