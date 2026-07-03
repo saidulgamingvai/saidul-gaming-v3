@@ -266,3 +266,16 @@ background:rgba(255,255,255,.08);
     font-weight:bold;
 
 }
+.match-status{
+
+font-size:28px;
+
+font-weight:bold;
+
+text-align:center;
+
+color:#FFD700;
+
+margin-top:15px;
+
+}
