@@ -5,7 +5,9 @@
 let match = loadMatch();
 
 // Save
-function saveMatch(match); {
+function saveMatch(match);
+window.dispatchEvent(new Event("storage"));
+ {
     localStorage.setItem("match", JSON.stringify(match));
 }
 
@@ -13,9 +15,12 @@ function saveMatch(match); {
 function homePlus() 
 celebrateGoal();
 match.goalEvent = true;
-saveMatch(match);{
+saveMatch(match);
+window.dispatchEvent(new Event("storage"));
+{
     match.homeTeam.score++;
-    saveMatch();
+    saveMatch(match);
+window.dispatchEvent(new Event("storage"));;
 }
 
 // Home Goal -
@@ -30,9 +35,12 @@ function homeMinus() {
 function awayPlus() 
 celebrateGoal();
 match.goalEvent = true;
-saveMatch(match);{
+saveMatch(match);
+window.dispatchEvent(new Event("storage"));
+{
     match.awayTeam.score++;
     saveMatch(match);
+window.dispatchEvent(new Event("storage"));
 }
 
 // Away Goal -
@@ -40,6 +48,7 @@ function awayMinus() {
     if (match.awayTeam.score > 0) {
         match.awayTeam.score--;
         saveMatch(match);
+window.dispatchEvent(new Event("storage"));
     }
 }
 
@@ -47,6 +56,7 @@ function awayMinus() {
 function toggleTimer() {
     match.timer.running = !match.timer.running;
     saveMatch(match);
+window.dispatchEvent(new Event("storage"));
 
     alert(match.timer.running ? "▶️ Timer Started" : "⏸️ Timer Paused");
 }
@@ -88,6 +98,7 @@ function yellowCard(){
     };
 
     saveMatch(match);
+window.dispatchEvent(new Event("storage"));
 
     alert("Yellow Card Sent");
 
@@ -101,6 +112,7 @@ function redCard(){
     };
 
     saveMatch(match);
+window.dispatchEvent(new Event("storage"));
 
     alert("Red Card Sent");
 
@@ -116,6 +128,7 @@ function addGoalScorer(){
     match.goalScorers.push(`${minute}' ⚽ ${player}`);
 
     saveMatch(match);
+window.dispatchEvent(new Event("storage"));
 
     alert("Goal Scorer Added");
 
@@ -131,6 +144,7 @@ text:player
 });
 
 saveMatch(match);
+window.dispatchEvent(new Event("storage"));
 function addYellowCard(){
 
     const player = document.getElementById("yellowPlayer").value;
@@ -144,6 +158,7 @@ function addYellowCard(){
     });
 
     saveMatch(match);
+window.dispatchEvent(new Event("storage"));
 
     alert("Yellow Card Added");
 
@@ -162,6 +177,7 @@ function addRedCard(){
     });
 
     saveMatch(match);
+window.dispatchEvent(new Event("storage"));
 
     alert("Red Card Added");
 
@@ -180,7 +196,7 @@ function addSubstitution(){
     });
 
     saveMatch(match);
-
+window.dispatchEvent(new Event("storage"));
     alert("Substitution Added");
 
 }
@@ -197,7 +213,7 @@ function halfTime(){
     match.timer.running = false;
 
     saveMatch(match);
-
+window.dispatchEvent(new Event("storage"));
     alert("Half Time");
 }
 
@@ -214,6 +230,7 @@ function fullTime(){
     match.timer.running = false;
 
     saveMatch(match);
+window.dispatchEvent(new Event("storage"));
 
     alert("Full Time");
 }
