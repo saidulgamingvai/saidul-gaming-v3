@@ -180,3 +180,14 @@ c.classList.remove("show");
 },3000);
 
 }
+// ==============================
+// Real Time Sync
+// ==============================
+
+window.addEventListener("storage", function () {
+
+    match = loadMatch();
+
+    updateScreen();
+
+});
