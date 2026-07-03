@@ -81,3 +81,20 @@ function showGoalPopup(player="GOAL!"){
     },3000);
 
 }
+function showEvent(text,type){
+
+    const popup=document.getElementById("eventPopup");
+
+    popup.innerHTML=text;
+
+    popup.className=type;
+
+    popup.style.display="block";
+
+    setTimeout(()=>{
+
+        popup.style.display="none";
+
+    },2500);
+
+}
