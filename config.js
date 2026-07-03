@@ -31,12 +31,13 @@ const CONFIG = {
 
     goalScorers: [],
 
-    stats: {
-        possession: "50% - 50%",
-        shots: "0 - 0",
-        corners: "0 - 0",
-        fouls: "0 - 0"
-    },
+    stats:{
+    possession:"50% - 50%",
+    shots:"0 - 0",
+    shotsTarget:"0 - 0",
+    corners:"0 - 0",
+    fouls:"0 - 0"
+},
 
     background: "assets/video/bg.mp4",
 
