@@ -159,3 +159,24 @@ function showEvent(text,type){
     },2500);
 
 }
+function celebrateGoal(){
+
+const c=document.getElementById("celebration");
+
+c.classList.add("show");
+
+const sound=document.getElementById("goalSound");
+
+if(sound){
+
+sound.play();
+
+}
+
+setTimeout(()=>{
+
+c.classList.remove("show");
+
+},3000);
+
+}
