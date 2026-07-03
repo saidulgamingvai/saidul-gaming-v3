@@ -180,3 +180,44 @@ function addSubstitution(){
     alert("Substitution Added");
 
 }
+function halfTime(){
+
+    match.commentary = "⏸ Half Time";
+
+    match.timeline.push({
+        minute: match.timer.minute,
+        event: "⏸ Half Time",
+        text: ""
+    });
+
+    match.timer.running = false;
+
+    saveMatch();
+
+    alert("Half Time");
+}
+
+function fullTime(){
+
+    match.commentary = "🏆 Full Time";
+
+    match.timeline.push({
+        minute: match.timer.minute,
+        event: "🏆 Full Time",
+        text: ""
+    });
+
+    match.timer.running = false;
+
+    saveMatch();
+
+    alert("Full Time");
+}
+
+function resetMatch(){
+
+    localStorage.removeItem("match");
+
+    location.reload();
+
+}
