@@ -101,3 +101,18 @@ function redCard(){
     alert("Red Card Sent");
 
 }
+function addGoalScorer(){
+
+    const player = document.getElementById("goalPlayer").value;
+
+    if(player==="") return;
+
+    const minute = match.timer.minute;
+
+    match.goalScorers.push(`${minute}' ⚽ ${player}`);
+
+    saveMatch();
+
+    alert("Goal Scorer Added");
+
+}
