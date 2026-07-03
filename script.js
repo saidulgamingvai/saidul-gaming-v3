@@ -3,10 +3,10 @@
 // Saidul Gaming Vai Live Engine
 // ==============================
 
-let match = JSON.parse(localStorage.getItem("match")) || CONFIG;
+let match = loadMatch();
 
 // Save Data
-function saveMatch() {
+function saveMatch(match); {
     localStorage.setItem("match", JSON.stringify(match));
 }
 
@@ -92,7 +92,7 @@ setInterval(() => {
 
         }
 
-        saveMatch();
+        saveMatch(match);
         updateScreen();
 
     }
