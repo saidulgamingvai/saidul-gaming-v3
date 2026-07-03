@@ -177,3 +177,32 @@ header{
 .green{
     background:#00C853;
 }
+/* Bottom News Ticker */
+
+#newsTicker{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#111;
+    color:#fff;
+    overflow:hidden;
+    padding:12px 0;
+    z-index:9999;
+}
+
+#tickerText{
+    display:inline-block;
+    white-space:nowrap;
+    padding-left:100%;
+    animation:tickerMove 18s linear infinite;
+}
+
+@keyframes tickerMove{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);
+    }
+}
