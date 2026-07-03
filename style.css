@@ -225,3 +225,22 @@ line-height:2;
 color:#00ff99;
 
 }
+#timeline{
+
+font-size:18px;
+
+line-height:2;
+
+padding:10px;
+
+color:#ffffff;
+
+}
+
+.timeline-item{
+
+padding:8px 0;
+
+border-bottom:1px solid rgba(255,255,255,.2);
+
+}
