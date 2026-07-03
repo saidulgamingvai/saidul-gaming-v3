@@ -30,7 +30,7 @@ const CONFIG = {
     commentary: "Welcome to Saidul Gaming Vai Live Score.",
 
     goalScorers: [],
-
+timeline:[]
     stats:{
     possession:"50% - 50%",
     shots:"0 - 0",
