@@ -10,7 +10,8 @@ function saveMatch() {
 }
 
 // Home Goal +
-function homePlus() {
+function homePlus() match.goalEvent = true;
+saveMatch();{
     match.homeTeam.score++;
     saveMatch();
 }
@@ -24,7 +25,8 @@ function homeMinus() {
 }
 
 // Away Goal +
-function awayPlus() {
+function awayPlus() match.goalEvent = true;
+saveMatch();{
     match.awayTeam.score++;
     saveMatch();
 }
