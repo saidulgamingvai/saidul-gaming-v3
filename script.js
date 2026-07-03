@@ -60,3 +60,24 @@ setInterval(() => {
 
 // First Load
 updateScreen();
+function showGoalPopup(player="GOAL!"){
+
+    const popup=document.getElementById("goalPopup");
+
+    popup.innerHTML="⚽ "+player;
+
+    popup.classList.add("show");
+
+    const sound=document.getElementById("goalSound");
+
+    if(sound){
+        sound.play();
+    }
+
+    setTimeout(()=>{
+
+        popup.classList.remove("show");
+
+    },3000);
+
+}
