@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
 
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    background:#101820;
+    padding:20px;
+}
+
+.admin{
+    max-width:500px;
+    margin:auto;
+}
+
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    border:none;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    margin:8px 0;
+    border:none;
+    border-radius:8px;
+    background:#00c853;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.row{
+    display:flex;
+    gap:10px;
+}
+
+.row button{
+    flex:1;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="admin">
+
+<h1>🎮 Live Score Control Panel</h1>
+
+<h3>Home Team</h3>
+<input id="homeName" value="Argentina">
+
+<h3>Away Team</h3>
+<input id="awayName" value="Brazil">
+
+<h3>Score Control</h3>
+
+<div class="row">
+<button onclick="homeMinus()">➖ Home</button>
+<button onclick="homePlus()">➕ Home</button>
+</div>
+
+<div class="row">
+<button onclick="awayMinus()">➖ Away</button>
+<button onclick="awayPlus()">➕ Away</button>
+</div>
+
+<h3>Commentary</h3>
+
+<textarea id="commentary" rows="5">Welcome to Saidul Gaming Vai Live Score.</textarea>
+
+<button onclick="toggleTimer()">▶️ Start / Pause Timer</button>
+
+<button onclick="saveChanges()">💾 Save Changes</button>
+
+</div>
+
+<script src="config.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>
