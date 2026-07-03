@@ -74,6 +74,21 @@ setInterval(() => {
 
 // First Load
 updateScreen();
+const goalList = document.getElementById("goalScorers");
+
+if(goalList){
+
+    if(match.goalScorers.length===0){
+
+        goalList.innerHTML="No Goals";
+
+    }else{
+
+        goalList.innerHTML = match.goalScorers.join("<br>");
+
+    }
+
+}
 const ticker = document.getElementById("tickerText");
 
 if (ticker) {
