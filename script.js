@@ -11,6 +11,20 @@ function saveMatch() {
 }
 
 // Update Screen
+document.getElementById("possession").innerText =
+match.stats.possession;
+
+document.getElementById("shots").innerText =
+match.stats.shots;
+
+document.getElementById("shotsTarget").innerText =
+match.stats.shotsTarget;
+
+document.getElementById("corners").innerText =
+match.stats.corners;
+
+document.getElementById("fouls").innerText =
+match.stats.fouls;
 function updateScreen() {
 
     document.getElementById("homeTeam").innerText =
