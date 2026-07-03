@@ -11,6 +11,33 @@ function saveMatch() {
 }
 
 // Update Screen
+const timeline=document.getElementById("timeline");
+
+if(timeline){
+
+if(match.timeline.length===0){
+
+timeline.innerHTML="No Events Yet";
+
+}else{
+
+timeline.innerHTML="";
+
+match.timeline.forEach(item=>{
+
+timeline.innerHTML+=`
+<div class="timeline-item">
+
+${item.minute}' ${item.event} - ${item.text}
+
+</div>
+`;
+
+});
+
+}
+
+}
 document.getElementById("possession").innerText =
 match.stats.possession;
 
