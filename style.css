@@ -206,3 +206,13 @@ header{
         transform:translateX(-100%);
     }
 }
+#statsTable{
+width:100%;
+border-collapse:collapse;
+}
+
+#statsTable td{
+padding:12px;
+border-bottom:1px solid rgba(255,255,255,.2);
+font-size:18px;
+}
